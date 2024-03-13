@@ -40,13 +40,13 @@
                             </a>
                         </li> 
                         <li>
-                            <a href="{{ url('/termsconditions') }}">
+                            <a href="{{ url('/termsconditions',['lang' => App::getLocale()]) }} }}">
                                 <i class='bx bxs-chevron-right'></i>
                                 {{ __('msg.Terms & Conditions') }}
                             </a>
                         </li> 
                         <li>
-                            <a href="{{ url('/privacypolicy') }}">
+                            <a href="{{ url('/privacypolicy',['lang' => App::getLocale()]) }} }}">
                                 <i class='bx bxs-chevron-right'></i>
                                 {{ __('msg.Privacy Policy') }}
                             </a>
@@ -54,7 +54,7 @@
 
                         
                         <li>
-                            <a href="{{ url('/contact') }}">
+                            <a href="{{ url('/contact',['lang' => App::getLocale()]) }} }}">
                                 <i class='bx bxs-chevron-right'></i>
                                 {{__('msg.Contact Us') }}
                             </a>
