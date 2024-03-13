@@ -1,4 +1,4 @@
-<!DOCTYPE html >
+<!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 
 <head>
@@ -8,7 +8,11 @@
         href="https://user-images.githubusercontent.com/97634238/165641863-c75ce720-db06-4f6a-b212-283017ff5d34.png">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="canonical" href="https://www.llosteo.com" />
+    <!-- Hreflang Tags -->
+    <link rel="alternate" hreflang="en" href="{{ url('/en') }}" />
+    <link rel="alternate" hreflang="fr" href="{{ url('/fr') }}" />
+    <!-- Canonical URL -->
+    <link rel="canonical" href="{{ url()->current() }}" />
     <meta name="keywords"
         content=" chiropractor in Mauritius, Chiropractic  healthcare , osteopaths, ostheopathy, Mauritius, back pain, chiropractor, neck pain, Osteopaths in Mauritius, osteopathic medicine, osteopathy Mauritius, back pain, spine pain, shoulder pain, tennis elbow, arthritis, sports injuries, and whiplash, alternative to medicine in Mauritius, ostéopathie à ile Maurice |llosteo.com">
     <meta property="og:url" content="https://www.llosteo.com">
@@ -105,120 +109,70 @@
 
 
                             <li class="nav-item">
-                            <a href="#" class="nav-link">
-                                 {{ __('msg.HELP') }}
-                                 <i class='bx bx-chevron-down'></i>
-                            </a>
-                                <ul class="dropdown-menu">
-                                    <li class="nav-item">
-                                    <a class="nav-link" href="{{ url('/help',['lang' => App::getLocale()]) }}">
-                                       {{ __('msg.FAQ') }}
-                                    </a>
-                                    </li>
-
-                                    <li class="nav-item">
-                                    <a class="nav-link" href="https://www.tella.tv/video/clsbphzo0009u0fkz5ibcaf6e/embed?b=0&title=0&a=1&loop=1&autoPlay=true&t=0&muted=1" target="_blank" >
-                                        {{ __('msg.How to book appointment?') }}
-                                    </a>
-                                    </li>
-
-                                    <li class="nav-item">
-                                    <a class="nav-link" href="https://www.tella.tv/video/clsbyan5k03570fl28jrs4udk/embed?b=0&title=0&a=1&loop=1&autoPlay=true&t=0&muted=1" target="_blank" >
-                                        {{ __('msg.How to reschedule appointment?') }}
-                                    </a>
-                                    </li>  
-
-                                    <li class="nav-item">
-                                    <a class="nav-link" href="https://www.tella.tv/video/clsboej5102nr0fia022l1ns5/embed?b=0&title=0&a=1&loop=0&autoPlay=true&t=0&muted=1" target="_blank" >
-                                        {{ __('msg.How to cancel appointment?') }}
-                                    </a>
-                                    </li>                                
-                                </ul>
-                            </a>
-                        </li>
-
-                            {{-- <li class="nav-item">
-                                <a href="{{ url('/help') }}" class="nav-link">
-                                    {{ __('msg.HELP') }}
-                                </a>
-                            </li> --}}
-                            {{-- <li class="nav-item">
-                            <a href="#" class="nav-link">
-                                {{ __('msg.HELP') }}
-                            <i class='bx bx-chevron-down'></i>
-                            </a>
-                            <ul class="dropdown-menu">
-                                <li class="media-body">
-                                    <a class="video" title="llosteo.com - Comment prendre rendez-vous?"
-                                        href="https://player.vimeo.com/video/861981495?h=f694ece008&autoplay=1&loop=1&color=ef0004&byline=0">Book
-                                        an appointment?</a>
-                                </li>
-
-                                <li>
-                                    <a class="video" title="llosteo.com - Comment prendre rendez-vous?"
-                                        href="https://player.vimeo.com/video/861981495?h=f694ece008&autoplay=1&loop=1&color=ef0004&byline=0">
-                                        Reschedule appointment? </a>
-                                </li>
-                                <li>
-                                    <a class="video" title="llosteo.com - Comment prendre rendez-vous?"
-                                        href="https://player.vimeo.com/video/861981495?h=f694ece008&autoplay=1&loop=1&color=ef0004&byline=0">Cancel
-                                        appointment?</a>
-                                </li>
-                                <li>
-                                    <a href="{{ url('/help') }}" class="nav-link">
-                                        {{ __('msg.HELP') }}
-                                    </a>
-                                </li>
-                            </ul>
-                            </li> --}}
-
-                            <!--Language-->
-                            {{-- <li class="nav-item">
                                 <a href="#" class="nav-link">
-                                    LANG
+                                    {{ __('msg.HELP') }}
                                     <i class='bx bx-chevron-down'></i>
                                 </a>
                                 <ul class="dropdown-menu">
                                     <li class="nav-item">
-                                        <a href="" class="nav-link">
-                                            {{ Config::get('languages')[App::getLocale()] }}
-
+                                        <a class="nav-link" href="{{ url('/help',['lang' => App::getLocale()]) }}">
+                                            {{ __('msg.FAQ') }}
                                         </a>
                                     </li>
+
                                     <li class="nav-item">
-                                        @foreach (Config::get('languages') as $lang => $language)
-                                        @if ($lang != App::getLocale())
-                                        <a class="nav-link" href="{{ route('lang.switch', $lang) }}"> {{$language}}</a>
-                                        @endif
-                                        @endforeach
+                                        <a class="nav-link"
+                                            href="https://www.tella.tv/video/clsbphzo0009u0fkz5ibcaf6e/embed?b=0&title=0&a=1&loop=1&autoPlay=true&t=0&muted=1"
+                                            target="_blank">
+                                            {{ __('msg.How to book appointment?') }}
+                                        </a>
                                     </li>
 
+                                    <li class="nav-item">
+                                        <a class="nav-link"
+                                            href="https://www.tella.tv/video/clsbyan5k03570fl28jrs4udk/embed?b=0&title=0&a=1&loop=1&autoPlay=true&t=0&muted=1"
+                                            target="_blank">
+                                            {{ __('msg.How to reschedule appointment?') }}
+                                        </a>
+                                    </li>
+
+                                    <li class="nav-item">
+                                        <a class="nav-link"
+                                            href="https://www.tella.tv/video/clsboej5102nr0fia022l1ns5/embed?b=0&title=0&a=1&loop=0&autoPlay=true&t=0&muted=1"
+                                            target="_blank">
+                                            {{ __('msg.How to cancel appointment?') }}
+                                        </a>
+                                    </li>
                                 </ul>
-                            </li> --}}
-                            <!--Language-->
-
-                           <!--Language-->
-
-                            <select style="background-color:black; color:white;" name="language" id="language" class="nav-item" class="nav-item" data-width="fit">
-                                <option  value=""  disabled selected> EN/FR</option>
-                            <option value="en"  data-content=' '>English</option>
-                        <option   value="fr" data-content=''> Français</option>
-                        </select>
-                            <!--Language-->
-                           
-
-                            <li class="nav-item">
-                                <a href="https://api.whatsapp.com/send?phone=23052537344&text=LLosteo.com%20AmandineLeca%20&utm_campaign=alwayson&utm_content=paid&lang=en"
-                                    target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/3670/3670051.png"
-                                        alt="WhatsApp" width="30" height="30"> </a>
+                                </a>
                             </li>
-                            
-                                <li class="nav-item">
-                                
-                                <a class="nav-link" href="" onclick="Calendly.initPopupWidget({url: 'https://calendly.com/llosteo-maurice?hide_landing_page_details=1&amp;hide_gdpr_banner=1'});return false;"> {{ __('msg.Book Appointment') }}
-                                </a>    
-                                
-                                </li>
+
+
+                        <!--Language-->
+
+                        <select style="background-color:black; color:white;" name="language" id="language"
+                            class="nav-item" class="nav-item" data-width="fit">
+                            <option value="" disabled selected> EN/FR</option>
+                            <option value="en" data-content=' '>English</option>
+                            <option value="fr" data-content=''> Français</option>
+                        </select>
+                        <!--Language-->
+
+
+                        <li class="nav-item">
+                            <a href="https://api.whatsapp.com/send?phone=23052537344&text=LLosteo.com%20AmandineLeca%20&utm_campaign=alwayson&utm_content=paid&lang=en"
+                                target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/3670/3670051.png"
+                                    alt="WhatsApp" width="30" height="30"> </a>
+                        </li>
+
+                        <li class="nav-item">
+
+                            <a class="nav-link" href=""
+                                onclick="Calendly.initPopupWidget({url: 'https://calendly.com/llosteo-maurice?hide_landing_page_details=1&amp;hide_gdpr_banner=1'});return false;">
+                                {{ __('msg.Book Appointment') }}
+                            </a>
+
+                        </li>
                         </ul>
 
 
@@ -292,24 +246,25 @@
                             data-url="https://calendly.com/llosteo-maurice?hide_landing_page_details=1&hide_gdpr_banner=1"
                             style="min-width:320px;height:700px;"></div> --}}
 
-                            {{-- Amandine Leca Planning --}}
-                        <div style="text-align: center; font-weight:500; color:black;padding:10px;text-shadow: 0 0 1px black;">
-                        <button class="btn btn-primary" style="float:center;">
-                        <a href="" onclick="Calendly.initPopupWidget({url: 'https://calendly.com/llosteo-maurice/llosteo-appointment?hide_landing_page_details=1&amp;hide_gdpr_banner=1&amp;back=1&amp;month'});return false;"><span style="color:White;padding:5px;">Amandine Leca</span></a>
-                        </button>    
+                        {{-- Amandine Leca Planning --}}
+                        <div
+                            style="text-align: center; font-weight:500; color:black;padding:10px;text-shadow: 0 0 1px black;">
+                            <button class="btn btn-primary" style="float:center;">
+                                <a href=""
+                                    onclick="Calendly.initPopupWidget({url: 'https://calendly.com/llosteo-maurice/llosteo-appointment?hide_landing_page_details=1&amp;hide_gdpr_banner=1&amp;back=1&amp;month'});return false;"><span
+                                        style="color:White;padding:5px;">Amandine Leca</span></a>
+                            </button>
                         </div>
-                        
+
                         {{-- Romain Lauri planning --}}
-                        <div style="text-align: center; font-weight:500; color:black;padding:10px;text-shadow: 0 0 1px black;">
-                        <button class="btn btn-primary" style="float:center;">
-                        <a href="" onclick="Calendly.initPopupWidget({url: 'https://calendly.com/llosteo-maurice/romain-lauri?hide_event_type_details=1&hide_gdpr_banner=1&month'});return false;"><span style="color:White;padding:5px;">Romain Lauri</span></a>
-                        </button>    
+                        <div
+                            style="text-align: center; font-weight:500; color:black;padding:10px;text-shadow: 0 0 1px black;">
+                            <button class="btn btn-primary" style="float:center;">
+                                <a href=""
+                                    onclick="Calendly.initPopupWidget({url: 'https://calendly.com/llosteo-maurice/romain-lauri?hide_event_type_details=1&hide_gdpr_banner=1&month'});return false;"><span
+                                        style="color:White;padding:5px;">Romain Lauri</span></a>
+                            </button>
                         </div>
-
-
-
-
-
                         <!-- llosteopathie list ostepathe - webymind End -->
 
                         </form>
@@ -427,7 +382,3 @@
 </body>
 
 </html>
-
-
-
-

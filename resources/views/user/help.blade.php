@@ -8,7 +8,11 @@
         href="https://user-images.githubusercontent.com/97634238/165641863-c75ce720-db06-4f6a-b212-283017ff5d34.png">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="canonical" href="https://www.llosteo.com/help" />
+    <!-- Hreflang Tags -->
+    <link rel="alternate" hreflang="en" href="{{ url('/en') }}" />
+    <link rel="alternate" hreflang="fr" href="{{ url('/fr') }}" />
+    <!-- Canonical URL -->
+    <link rel="canonical" href="{{ url()->current() }}" />
     <meta property="og:image"
         content="https://user-images.githubusercontent.com/97634238/165654390-7f667de3-3dfc-4f2b-9952-65bbc093c99f.png">
     <meta name="keywords"

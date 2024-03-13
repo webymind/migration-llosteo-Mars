@@ -7,7 +7,11 @@
         <meta charset="UTF-8">
         <meta property="og:image" content="https://user-images.githubusercontent.com/97634238/165654390-7f667de3-3dfc-4f2b-9952-65bbc093c99f.png">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="canonical" href="https://www.llosteo.com/service" />
+    <!-- Hreflang Tags -->
+    <link rel="alternate" hreflang="en" href="{{ url('/en') }}" />
+    <link rel="alternate" hreflang="fr" href="{{ url('/fr') }}" />
+    <!-- Canonical URL -->
+    <link rel="canonical" href="{{ url()->current() }}" />
         <meta name="keywords" content=" llosteo - Chiropractor services in Mauritius Osteopath in Mauritius,  can help with Headaches, neck pain, migraines | Neck pain and back pain,  Insomnia, Stress and tension, eyes and ears | Anxiety or the inability to relax | Digestive problems ·">
         <meta property="og:site_name" content=" https://www.llosteo.com ">
         <meta property="og:url" content= "https://www.llosteo.com/service">
@@ -75,7 +79,7 @@
                         <h2>{{ __('msg.OSTEOPATHS FOR ?') }}</h2>
                         <ul>
                             <li>
-                                <p><a href="https://www.llosteo.com/service">
+                                <p><a href="{{ url('/service',['lang' => App::getLocale()]) }}">
                                     {{ __('msg.ADULT') }} | Rs 2,100 - Rs 1,900
                                     
                                 </p></a>
@@ -83,7 +87,7 @@
                             </li>
                              <br>
                             <li>
-                                <p><a href="https://www.llosteo.com/service">
+                                <p><a href="{{ url('/service',['lang' => App::getLocale()]) }}">
                                     {{ __('msg.CHILD') }} | Rs 1,700
                                     
                                 </p></a>
@@ -92,7 +96,7 @@
                              <br>
 
                             <li>
-                                <p><a href="https://www.llosteo.com/service">
+                                <p><a href="{{ url('/service',['lang' => App::getLocale()]) }}">
                                     {{ __('msg.INFANT') }} | Rs 1,400
                                     
                                 </p></a>

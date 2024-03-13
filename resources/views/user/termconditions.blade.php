@@ -6,7 +6,11 @@
          <link rel="icon" type="image/favicon-32x32" href="https://user-images.githubusercontent.com/97634238/165641863-c75ce720-db06-4f6a-b212-283017ff5d34.png">
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="canonical" href="https://llosteo.com/termsconditions" />
+            <!-- Hreflang Tags -->
+    <link rel="alternate" hreflang="en" href="{{ url('/en') }}" />
+    <link rel="alternate" hreflang="fr" href="{{ url('/fr') }}" />
+    <!-- Canonical URL -->
+    <link rel="canonical" href="{{ url()->current() }}" />
         <meta name="keywords" content="llosteo, L & L Ostéopathie à Maurice | L&L Osteopath in Mauritius | Book appointment online your consultation | llosteo.com | Chiropractor in Mauritius">
         <meta property="og:site_name" content=" llosteo.com | L & L Ostéopathie | Chiropractor | Osteopathie | Osteopath in Mauritius">
         <meta property="og:title" content=" L & L Ostéopathie | terms & conditions ">

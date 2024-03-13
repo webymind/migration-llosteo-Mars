@@ -15,11 +15,11 @@
         <div class="row pt-45">
             <div class="col-lg-4 col-md-6">
                 <div class="service-item service-item-bg1">
-                    <a href="{{ url('/service') }}" class="">
+                    <a href="{{ url('/service',['lang' => App::getLocale()]) }}" class="">
                         
                     </a>
                     <h3>
-                        <a href="{{ url('/service') }}">{{ __('msg.ADULT') }}</a>
+                        <a href="{{ url('/service',['lang' => App::getLocale()]) }}">{{ __('msg.ADULT') }}</a>
                     </h3>
                     <p></p>
                     <div class="service-shape-1">
@@ -33,11 +33,11 @@
 
             <div class="col-lg-4 col-md-6">
                 <div class="service-item service-item-bg2">
-                    <a href="{{ url('/service') }}" class="">
+                    <a href="{{ url('/service',['lang' => App::getLocale()]) }}" class="">
                        
                     </a>
                     <h3>
-                        <a href="{{ url('/service') }}">{{ __('msg.INFANT') }}</a>
+                        <a href="{{ url('/service',['lang' => App::getLocale()]) }}">{{ __('msg.INFANT') }}</a>
                     </h3>
                     <p></p>
                     <div class="service-shape-1">
@@ -51,11 +51,11 @@
 
             <div class="col-lg-4 col-md-6">
                 <div class="service-item service-item-bg3">
-                    <a href="{{ url('/service') }}" class="">
+                    <a href="{{ url('/service',['lang' => App::getLocale()]) }}" class="">
                         
                     </a>
                     <h3>
-                        <a href="{{ url('/service') }}">{{ __('msg.CHILD') }}</a>
+                        <a href="{{ url('/service',['lang' => App::getLocale()]) }}">{{ __('msg.CHILD') }}</a>
                     </h3>
                     <p></p>
                     <div class="service-shape-1">

@@ -6,7 +6,11 @@
         <link rel="icon" type="image/favicon-32x32" href="https://user-images.githubusercontent.com/97634238/165641863-c75ce720-db06-4f6a-b212-283017ff5d34.png">
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="canonical" href="https://www.llosteo.com/privacypolicy" />
+    <!-- Hreflang Tags -->
+    <link rel="alternate" hreflang="en" href="{{ url('/en') }}" />
+    <link rel="alternate" hreflang="fr" href="{{ url('/fr') }}" />
+    <!-- Canonical URL -->
+    <link rel="canonical" href="{{ url()->current() }}" />
         <meta name="keywords" content="llosteo, Osteopath in Mauritius | Osteopath consultation website privacy policy | llosteo.com">
         <meta property="og:site_name" content=" Chiropractor |L & L Ostéopathie | llosteo.com | Ostéopathie | Osteopath in Mauritius - Chiropractor">
         <meta property="og:title" content=" L & L Ostéopathie | Privacy Policy ">
