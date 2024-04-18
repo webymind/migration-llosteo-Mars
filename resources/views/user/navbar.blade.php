@@ -70,7 +70,7 @@
 
                                 <li class="nav-item">
                                     <a class="nav-link"
-                                        href="https://www.tella.tv/video/clsbyan5k03570fl28jrs4udk/embed?b=0&title=0&a=1&loop=1&autoPlay=true&t=0&muted=1"
+                                        href="{{ url('/reschedule-appointment',['lang' => App::getLocale()]) }}"
                                         target="_blank">
                                         {{ __('msg.How to reschedule appointment?') }}
                                     </a>
