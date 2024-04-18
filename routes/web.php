@@ -47,3 +47,13 @@ Route::get('/{lang?}', function ($lang = null) {
     }
     return view('user.home');
 });
+
+
+Route::get('/reschedule-appointment/{lang?}', function ($lang = null) {
+    if ($lang) {
+        App::setLocale($lang);
+    } else {
+        App::setLocale('en'); // Default to English if no language is provided
+    }
+    return view('user.reschedule');
+});
